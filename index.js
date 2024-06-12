@@ -45,9 +45,15 @@ function submitAnswer() {
   let spaceNum = document.querySelector('.spaceNum').value;
 
   // 정답 체크
-  if(spaceNum == num){ posAnswer.innerHTML = `정답입니다`; }
-  else{ posAnswer.innerHTML = `오답입니다! 정답은 ${num}`; return false; }
+  if(spaceNum == num){ 
+    posAnswer.innerHTML = `정답입니다`;
+  }
+  else{ 
+    posAnswer.innerHTML = `오답입니다! 정답은 ${num}`;
+  }
 
+  // 문제 푼 후 input 초기화
+  document.getElementById("spaceNum").value = '';
 
 }
 
